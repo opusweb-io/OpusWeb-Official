@@ -5,19 +5,19 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact@opusweb.dev",
-    href: "mailto:contact@opusweb.dev",
+    value: "opusweb@tuta.io",
+    href: "mailto:opusweb@tuta.io",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+91 9922327720",
+    href: "tel:+919922327720",
   },
   {
     icon: MapPin,
     title: "Office",
-    value: "123 Tech Street, San Francisco, CA 94103",
+    value: "Kolhapur, Maharashtra, India.",
   },
 ];
 

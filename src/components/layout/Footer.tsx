@@ -67,16 +67,15 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 font-headline">Contact</h4>
             <address className="not-italic text-primary-foreground/80 space-y-1 text-sm">
-              <p>123 Tech Street</p>
-              <p>San Francisco, CA 94103</p>
+              <p>Kolhapur, Maharashtra, India.</p>
               <p className="mt-2">
-                <a href="mailto:contact@opusweb.dev" className="hover:text-primary-foreground transition-colors">
-                  contact@opusweb.dev
+                <a href="mailto:opusweb@tuta.io" className="hover:text-primary-foreground transition-colors">
+                  opusweb@tuta.io
                 </a>
               </p>
               <p>
-                <a href="tel:+15551234567" className="hover:text-primary-foreground transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+919922327720" className="hover:text-primary-foreground transition-colors">
+                  +91 9922327720
                 </a>
               </p>
             </address>
