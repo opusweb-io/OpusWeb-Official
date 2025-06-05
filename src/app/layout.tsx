@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import ScrollProgressBar from '@/components/ui/ScrollProgressBar';
 import PageLoader from '@/components/layout/PageLoader'; // Import the loader
 import { useState, useEffect } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,6 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isLoading, setIsLoading] = useState(true);
+  const { toast } = useToast();
+  const [exploreAchievementShown, setExploreAchievementShown] = useState(false);
 
   useEffect(() => {
     // Simulate loading time
@@ -53,6 +56,38 @@ export default function RootLayout({
       document.title = 'Loading OpusWeb...';
     }
   }, [isLoading]);
+
+  useEffect(() => {
+    const handleScrollAchievement = () => {
+      if (!isLoading && !exploreAchievementShown) {
+        const scrollPosition = window.innerHeight + window.scrollY;
+        // Ensure body.offsetHeight is not 0 if content is still loading or very short
+        const pageHeight = document.body.offsetHeight || window.innerHeight; 
+        const scrollThreshold = pageHeight - 100; // 100px from bottom, or near if page very short
+
+        if (scrollPosition >= scrollThreshold && pageHeight > window.innerHeight + 100) { // Only trigger if page is substantially scrollable
+          toast({
+            title: "Discovery Badge Unlocked! 🏆",
+            description: "You've successfully explored all of OpusWeb! Ready to build something amazing?",
+            duration: 5000, // Show for 5 seconds
+          });
+          setExploreAchievementShown(true);
+        }
+      }
+    };
+
+    if (typeof window !== 'undefined') { // Ensure window is defined (for SSR safety, though this is client component)
+      window.addEventListener('scroll', handleScrollAchievement, { passive: true });
+      // Initial check in case the page loads already at the bottom (short content)
+      handleScrollAchievement(); 
+    }
+    
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', handleScrollAchievement);
+      }
+    };
+  }, [isLoading, exploreAchievementShown, toast]);
 
 
   return (
