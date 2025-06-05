@@ -1,5 +1,4 @@
-
-"use client";
+'use client';
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -17,13 +16,13 @@ export default function HeroSection() {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-3xl mx-auto text-center py-24 md:py-32">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-headline animate-fade-in-down" style={{ animationDuration: '2s' }}>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-headline">
             Crafting Digital Masterpieces
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-10 animate-fade-in-up delay-200" style={{ animationDuration: '2s', animationDelay: '0.5s' }}>
+          <p className="text-xl md:text-2xl text-foreground/80 mb-10">
             OpusWeb: Where Innovation Meets Web Development
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up delay-400" style={{ animationDuration: '2s', animationDelay: '1s' }}>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
               <Link href="#contact">
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -37,38 +36,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <style jsx global>{`
-        @keyframes fade-in-down {
-          0% {
-            opacity: 0;
-            transform: translateY(-30px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes fade-in-up {
-          0% {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-down {
-          animation-name: fade-in-down;
-          animation-timing-function: ease-out;
-          animation-fill-mode: forwards;
-        }
-        .animate-fade-in-up {
-          animation-name: fade-in-up;
-          animation-timing-function: ease-out;
-          animation-fill-mode: forwards;
-        }
-      `}</style>
     </section>
   );
 }

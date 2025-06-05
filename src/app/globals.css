@@ -117,3 +117,37 @@
     @apply font-headline;
   }
 }
+
+@layer utilities {
+  .animate-page-turn-in {
+    animation: page-turn-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  @keyframes page-turn-in {
+    0% {
+      transform: translateX(50px) rotateY(-25deg);
+      opacity: 0;
+      transform-origin: left center;
+    }
+    100% {
+      transform: translateX(0) rotateY(0deg);
+      opacity: 1;
+      transform-origin: left center;
+    }
+  }
+
+  /* Reduced motion fallback */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-page-turn-in {
+      animation: page-fade-in 0.7s ease-out forwards;
+    }
+    @keyframes page-fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
