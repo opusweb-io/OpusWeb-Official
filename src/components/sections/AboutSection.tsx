@@ -13,17 +13,17 @@ export default function AboutSection() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 font-headline">
-              About Us
+              Our Process
             </h2>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
-                At OpusWeb, we are passionate about creating exceptional digital experiences. Our team of skilled developers, designers, and strategists work together to deliver solutions that drive your business forward.
+                At OpusWeb, we're passionate about transforming your vision into exceptional digital realities. We believe that a transparent and collaborative process is key to crafting web solutions that not only meet but exceed expectations.
               </p>
               <p>
-                Founded in 2020, we have helped over 100 clients transform their ideas into reality. We believe in the power of technology to solve problems and create opportunities, crafting bespoke web solutions that are both innovative and effective.
+                Our journey together begins with <span className="text-primary font-semibold">Discovery</span>, where we dive deep into your needs and ideas. Next, our <span className="text-accent font-semibold">Design</span> phase focuses on creating intuitive and engaging user interfaces. This flows into meticulous <span className="text-primary font-semibold">Development</span>, where we build robust and scalable applications. Rigorous <span className="text-accent font-semibold">Testing</span> ensures every detail is polished and performs flawlessly.
               </p>
               <p>
-                Our mission is to build not just websites, but digital masterpieces that stand out in the crowded online world, ensuring your brand's voice is heard loud and clear.
+                Finally, we orchestrate a smooth <span className="text-primary font-semibold">Launch</span>, bringing your digital masterpiece to the world. Our mission is to guide you through each step, ensuring a final product that is both innovative and effective, truly representing your brand.
               </p>
             </div>
           </div>
