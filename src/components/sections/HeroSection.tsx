@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center text-foreground overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/50 to-background/90"></div>
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-60"
       >
         <HeroBackground className="w-full h-full object-cover"/>
       </div>
