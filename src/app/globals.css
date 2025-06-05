@@ -4,89 +4,95 @@
 
 @layer base {
   :root {
-    --background: 220 17% 98%; /* #F9FAFB Light Gray */
-    --foreground: 224 71% 4%; /* #080918 Near Black for text */
+    --background: 220 15% 15%; /* #1F232B Very Dark Desaturated Blue */
+    --foreground: 220 10% 85%; /* #D5D7DE Light Gray/Off-White */
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card: 220 15% 20%; /* #2A2F39 Slightly Lighter Dark */
+    --card-foreground: 220 10% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    --popover: 220 15% 18%; /* #252A33 Darker Popover */
+    --popover-foreground: 220 10% 85%;
 
-    --primary: 243 75% 58%; /* #4F46E5 Indigo */
-    --primary-foreground: 0 0% 98%; /* White */
+    --primary: 40 85% 50%; /* #E6A11A Muted Gold/Amber */
+    --primary-foreground: 220 15% 10%; /* #16191E Very Dark for text on primary */
 
-    --secondary: 220 13% 91%; /* Light Gray variant for secondary elements */
-    --secondary-foreground: 224 71% 4%;
+    --secondary: 220 15% 25%; /* #353B47 Lighter shade for secondary elements */
+    --secondary-foreground: 220 10% 80%; /* #C8CBD2 */
 
-    --muted: 220 9% 94%; /* Lighter gray for muted text/elements */
-    --muted-foreground: 220 9% 45%; 
+    --muted: 220 10% 30%; /* #434750 */
+    --muted-foreground: 220 10% 60%; /* #8C9099 */
 
-    --accent: 198 93% 60%; /* #38BDF8 Teal */
-    --accent-foreground: 210 40% 98%; /* White for good contrast on Teal */
+    --accent: 0 65% 50%; /* #D94040 Desaturated Red */
+    --accent-foreground: 220 10% 95%; /* #F0F1F3 Very Light for text on accent */
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%; /* #CC3333 */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
 
-    --border: 220 13% 88%;
-    --input: 220 13% 91%;
-    --ring: 243 75% 58%; /* Indigo for focus rings */
+    --border: 220 10% 28%; /* #3E424A Subtle borders */
+    --input: 220 10% 22%; /* #2E323B Input background */
+    --ring: 40 85% 55%; /* #EAA92E Brighter Gold for focus rings */
 
     --radius: 0.5rem;
 
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 35 70% 50%;
+    --chart-2: 0 50% 45%;
+    --chart-3: 210 30% 40%;
+    --chart-4: 50 40% 50%;
+    --chart-5: 25 60% 55%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 15% 18%;
+    --sidebar-foreground: 220 10% 75%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 220 15% 22%;
+    --sidebar-accent-foreground: var(--accent);
+    --sidebar-border: 220 10% 25%;
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 224 71% 4%; /* Dark background for dark mode */
-    --foreground: 0 0% 98%; /* Light text for dark mode */
+    --background: 0 0% 5%; /* #0D0D0D Near Black */
+    --foreground: 0 0% 95%; /* #F2F2F2 Off-White */
 
-    --card: 224 71% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 8%; /* #141414 */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 224 71% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 7%; /* #121212 */
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 243 75% 58%; /* Indigo */
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 80%; /* #CCCCCC Light Gray for primary actions (monochromatic) */
+    --primary-foreground: 0 0% 5%; /* Black text */
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 12%; /* #1F1F1F */
+    --secondary-foreground: 0 0% 90%; /* #E6E6E6 */
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 8% 65%;
+    --muted: 0 0% 15%; /* #262626 */
+    --muted-foreground: 0 0% 60%; /* #999999 */
 
-    --accent: 198 93% 60%; /* Teal */
-    --accent-foreground: 224 71% 4%;
+    --accent: 0 0% 70%; /* #B3B3B3 Medium Gray for accent (monochromatic) */
+    --accent-foreground: 0 0% 5%; /* Black text */
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 80% 50%; /* Classic Red for destructive */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 243 75% 58%;
+    --border: 0 0% 20%; /* #333333 */
+    --input: 0 0% 10%; /* #1A1A1A */
+    --ring: 0 0% 85%; /* #D9D9D9 */
+    
+    --chart-1: 0 0% 70%;
+    --chart-2: 0 0% 60%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 0 0% 30%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: var(--accent);
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -98,7 +104,6 @@
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
   }
-  /* Apply Poppins to headings specifically if needed, or rely on font-headline class */
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }
