@@ -18,9 +18,7 @@ const quickLinks = [
 
 const serviceLinks = [
   { label: "Web Development" },
-  { label: "Mobile Development" },
   { label: "UI/UX Design" },
-  { label: "DevOps & Deployment" },
 ];
 
 export default function Footer() {

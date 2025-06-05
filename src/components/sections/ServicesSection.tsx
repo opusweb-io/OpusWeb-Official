@@ -1,4 +1,4 @@
-import { Code2, Smartphone, Palette, Rocket } from 'lucide-react';
+import { Code2, Palette } from 'lucide-react';
 import ServiceCard from '@/components/ui/ServiceCard';
 import type { LucideIcon } from 'lucide-react';
 
@@ -15,19 +15,9 @@ const services: Service[] = [
     icon: Code2,
   },
   {
-    title: "Mobile Development",
-    description: "Cross-platform mobile applications that work seamlessly on iOS and Android.",
-    icon: Smartphone,
-  },
-  {
     title: "UI/UX Design",
     description: "User-centered design that enhances user experience and engagement.",
     icon: Palette,
-  },
-  {
-    title: "DevOps & Deployment",
-    description: "Streamlined deployment and continuous integration for your applications.",
-    icon: Rocket,
   },
 ];
 
