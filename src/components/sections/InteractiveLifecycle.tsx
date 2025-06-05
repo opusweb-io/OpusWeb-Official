@@ -64,25 +64,24 @@ export default function InteractiveLifecycle() {
           width: 600px;
           height: 600px;
           border-radius: 20px;
-          overflow: hidden; /* Clip glow effects if they extend too much */
-          background: rgba(255, 255, 255, 0.05); /* Slightly transparent background for dark themes */
+          overflow: hidden;
+          background: hsl(var(--card) / 0.1);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 20px; /* Added padding for better visual spacing */
+          padding: 20px;
         }
         
         .dark .interactive-lifecycle-wrapper {
-           background: rgba(0, 0, 0, 0.1); /* Darker transparent background for dark themes */
+           background: hsl(var(--card) / 0.2); 
         }
-
 
         .stage-card {
             position: absolute;
             background: linear-gradient(145deg, hsl(var(--card) / 0.9), hsl(var(--card) / 0.8) );
             border-radius: 15px;
-            padding: 20px 25px;
+            padding: 20px 25px; /* Approx card width 140px, height 130px */
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
             display: flex;
             flex-direction: column;
@@ -93,6 +92,7 @@ export default function InteractiveLifecycle() {
             transition: all 0.3s ease-in-out;
             cursor: default;
             animation: float 6s ease-in-out infinite;
+            width: 140px; /* Explicit width */
         }
 
         .stage-card:hover {
@@ -109,14 +109,14 @@ export default function InteractiveLifecycle() {
             height: 50px;
             border-radius: 50%;
             font-size: 24px;
-            color: white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle glow, reduced for dark themes */
+            color: hsl(var(--primary-foreground)); /* Ensure icon color contrasts with background */
+            box-shadow: 0 0 15px hsl(var(--primary) / 0.2); 
             position: relative;
-            overflow: hidden; /* For gradient and inner glow */
+            overflow: hidden; 
         }
         
         .dark .stage-card .icon {
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
+            box-shadow: 0 0 15px hsl(var(--primary) / 0.15); 
         }
 
         .stage-card .icon::before {
@@ -126,7 +126,7 @@ export default function InteractiveLifecycle() {
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle at center, hsl(var(--primary-foreground) / 0.15) 0%, transparent 70%);
             border-radius: inherit;
         }
 
@@ -144,23 +144,23 @@ export default function InteractiveLifecycle() {
         }
 
         /* Specific stage colors */
-        .discovery .icon { background: linear-gradient(45deg, #4F46E5, #6366F1); } /* Indigo */
-        .design .icon { background: linear-gradient(45deg, #0D9488, #14B8A6); } /* Teal */
-        .development .icon { background: linear-gradient(45deg, #F97316, #FB923C); } /* Orange accent */
-        .testing .icon { background: linear-gradient(45deg, #EAB308, #FACC15); } /* Yellow accent */
-        .launch .icon { background: linear-gradient(45deg, #EF4444, #F87171); } /* Red accent */
+        .discovery .icon { background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary) / 0.8)); } 
+        .design .icon { background: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--accent) / 0.8)); } 
+        .development .icon { background: linear-gradient(45deg, #F97316, #FB923C); } /* Orange - keep for variety or map to theme */
+        .testing .icon { background: linear-gradient(45deg, #EAB308, #FACC15); } /* Yellow - keep for variety or map to theme */
+        .launch .icon { background: linear-gradient(45deg, #EF4444, #F87171); } /* Red - keep for variety or map to theme */
+
 
         /* Positioning for each stage */
-        .discovery { top: 10%; left: 10%; animation-delay: 0s; }
-        .design { top: 10%; right: 10%; animation-delay: 1s; }
-        .development { bottom: 10%; right: 10%; animation-delay: 2s; }
-        .testing { bottom: 10%; left: 10%; animation-delay: 3s; }
+        .discovery { top: 10%; left: 8%; animation-delay: 0s; } /* Was 10% */
+        .design { top: 10%; right: 7%; animation-delay: 1s; }    /* Was 10% */
+        .development { bottom: 10%; right: 9%; animation-delay: 2s; } /* Was 10% */
+        .testing { bottom: 10%; left: 6%; animation-delay: 3s; }    /* Was 10% */
         .launch { 
-            top: calc(50% - 65px); /* Adjust based on card height approx 130px */
-            left: calc(50% - 70px); /* Adjust based on card width approx 140px */
+            top: calc(50% - 65px); /* Card height approx 130px -> 130/2 = 65 */
+            left: calc(50% - 70px); /* Card width approx 140px -> 140/2 = 70 */
             animation-delay: 4s; 
         }
-
 
         @keyframes float {
             0% { transform: translateY(0px); }
@@ -174,17 +174,17 @@ export default function InteractiveLifecycle() {
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Allows clicks to pass through */
+            pointer-events: none; 
         }
         svg.connectors path {
             fill: none;
-            stroke: rgba(79, 70, 229, 0.4); /* Indigo with transparency */
+            stroke: hsl(var(--primary) / 0.4); 
             stroke-width: 2;
-            stroke-dasharray: 8 4; /* Dotted line */
+            stroke-dasharray: 8 4; 
             animation: dash 20s linear infinite;
         }
          .dark svg.connectors path {
-            stroke: rgba(129, 140, 248, 0.3); /* Lighter Indigo for dark mode */
+            stroke: hsl(var(--primary) / 0.3); 
         }
 
         @keyframes dash {
@@ -200,7 +200,7 @@ export default function InteractiveLifecycle() {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            opacity: 0.1; /* Very subtle */
+            opacity: 0.1; 
             pointer-events: none;
         }
         
@@ -210,17 +210,16 @@ export default function InteractiveLifecycle() {
 
         .tech-bg span {
             position: absolute;
-            background: rgba(79, 70, 229, 0.5); /* Indigo */
+            background: hsl(var(--primary) / 0.5); 
             border-radius: 50%;
             animation: pulse 4s ease-out infinite;
             filter: blur(5px);
-            opacity: 0; /* Start hidden */
+            opacity: 0; 
         }
         
         .dark .tech-bg span {
-            background: rgba(129, 140, 248, 0.3); /* Lighter Indigo for dark mode */
+            background: hsl(var(--primary) / 0.3); 
         }
-
 
         .tech-bg span:nth-child(1) { top: 10%; left: 20%; width: 30px; height: 30px; animation-delay: 0s; }
         .tech-bg span:nth-child(2) { top: 80%; left: 70%; width: 40px; height: 40px; animation-delay: 1.5s; }
@@ -237,24 +236,24 @@ export default function InteractiveLifecycle() {
         .icon-svg {
             width: 32px;
             height: 32px;
-            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); /* Subtle shadow */
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); 
         }
         .icon-svg path,
         .icon-svg polyline,
         .icon-svg line,
         .icon-svg circle, 
         .icon-svg rect {
-            stroke: white; /* Ensure stroke is white as per original design intention */
-            fill: none; /* Most icons are stroke based */
+            stroke: hsl(var(--primary-foreground)); 
+            fill: none; 
         }
         
-        /* Specific fills for icons that need it */
+        /* Specific fills for icons that need it, ensure they also use primary-foreground or similar for consistency */
         .icon-svg.discovery-icon path,
-        .icon-svg.design-icon rect,
-        .icon-svg.launch-icon rect {
-           /* If some parts need fill, they can be targeted specifically or adjust SVG */
+        .icon-svg.design-icon rect, /* Example if rect part of design icon has a fill */
+        .icon-svg.launch-icon rect { /* Example if rect part of launch icon has a fill */
+           /* stroke: hsl(var(--primary-foreground)); */
+           /* fill: hsl(var(--primary-foreground) / 0.1); /* Optional very subtle fill */
         }
-
       `}</style>
       <div className="interactive-lifecycle-wrapper">
         <div className="tech-bg">
@@ -266,17 +265,17 @@ export default function InteractiveLifecycle() {
         </div>
 
         <svg className="connectors" viewBox="0 0 600 600">
-          {/* Outer ring connecting stages */}
-          <path d="M130 125 Q 300 50 470 125" /> {/* Approx Discovery center to Design center */}
-          <path d="M470 125 Q 550 300 470 475" /> {/* Approx Design center to Development center */}
-          <path d="M470 475 Q 300 550 130 475" /> {/* Approx Development center to Testing center */}
-          <path d="M130 475 Q 50 300 130 125" /> {/* Approx Testing center to Discovery center */}
+          {/* Outer ring connecting stages. Card centers approx: Dsc(118,125), Dgn(488,125), Dev(476,475), Tst(106,475) */}
+          <path d="M118 125 Q 300 50 488 125" /> {/* Discovery to Design */}
+          <path d="M488 125 Q 550 300 476 475" /> {/* Design to Development */}
+          <path d="M476 475 Q 300 550 106 475" /> {/* Development to Testing */}
+          <path d="M106 475 Q 50 300 118 125" /> {/* Testing to Discovery */}
           
           {/* Connect outer stages to the central Launch stage (center at 300,300) */}
-          <path d="M130 125 Q 215 212.5 300 300" /> {/* Discovery to Launch center */}
-          <path d="M470 125 Q 385 212.5 300 300" /> {/* Design to Launch center */}
-          <path d="M470 475 Q 385 387.5 300 300" /> {/* Development to Launch center */}
-          <path d="M130 475 Q 215 387.5 300 300" /> {/* Testing to Launch center */}
+          <path d="M118 125 Q 209 212.5 300 300" />   {/* Discovery to Launch center */}
+          <path d="M488 125 Q 394 212.5 300 300" />   {/* Design to Launch center */}
+          <path d="M476 475 Q 388 387.5 300 300" />   {/* Development to Launch center */}
+          <path d="M106 475 Q 203 387.5 300 300" />   {/* Testing to Launch center */}
         </svg>
 
         <div className="stage-card discovery">
@@ -284,7 +283,7 @@ export default function InteractiveLifecycle() {
             <DiscoveryIcon />
           </div>
           <div className="title">Discovery</div>
-          <div className="description">Understanding needs, wireframing ideas.</div>
+          <div className="description">Needs, ideas, and wireframing.</div>
         </div>
 
         <div className="stage-card design">
@@ -292,7 +291,7 @@ export default function InteractiveLifecycle() {
             <DesignIcon />
           </div>
           <div className="title">Design</div>
-          <div className="description">Creating mockups and user interfaces.</div>
+          <div className="description">Mockups and user interfaces.</div>
         </div>
 
         <div className="stage-card development">
@@ -300,7 +299,7 @@ export default function InteractiveLifecycle() {
             <DevelopmentIcon />
           </div>
           <div className="title">Development</div>
-          <div className="description">Building the application with code.</div>
+          <div className="description">Building the app with code.</div>
         </div>
 
         <div className="stage-card testing">
@@ -316,7 +315,7 @@ export default function InteractiveLifecycle() {
             <LaunchIcon />
           </div>
           <div className="title">Launch</div>
-          <div className="description">Deploying the application to users.</div>
+          <div className="description">Deploying to users.</div>
         </div>
       </div>
     </>
