@@ -121,29 +121,27 @@
 }
 
 @layer utilities {
-  .animate-page-turn-in {
-    /* Updated animation name, duration, and timing function */
-    animation: page-slide-from-right-in 0.5s ease-in forwards;
+  .animate-diagonal-reveal {
+    animation: diagonal-section-entry 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 
-  /* Renamed and updated keyframes for slide-from-right effect */
-  @keyframes page-slide-from-right-in {
-    0% {
-      transform: translateX(100%); /* Start off-screen to the right */
+  @keyframes diagonal-section-entry {
+    from {
       opacity: 0;
+      transform: translateX(25%) skewX(-7deg); /* Start off-screen to the right and slightly skewed */
     }
-    100% {
-      transform: translateX(0); /* End at original position */
+    to {
       opacity: 1;
+      transform: translateX(0) skewX(0deg); /* End in place, unskewed */
     }
   }
 
-  /* Reduced motion fallback: simple fade-in with consistent duration */
+  /* Reduced motion fallback: simple fade-in */
   @media (prefers-reduced-motion: reduce) {
-    .animate-page-turn-in {
+    .animate-diagonal-reveal {
       animation: page-fade-in 0.5s ease-out forwards;
     }
-    @keyframes page-fade-in {
+    @keyframes page-fade-in { /* Re-using a simple fade-in for reduced motion */
       0% {
         opacity: 0;
       }

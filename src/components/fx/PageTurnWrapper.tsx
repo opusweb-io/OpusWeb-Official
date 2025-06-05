@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
@@ -44,7 +45,7 @@ export default function PageTurnWrapper({ children }: PageTurnWrapperProps) {
       ref={sectionRef}
       className={cn(
         'opacity-0', // Start fully transparent
-        isVisible && 'animate-page-turn-in' // Apply animation when visible
+        isVisible && 'animate-diagonal-reveal' // Apply animation when visible
       )}
     >
       {children}
