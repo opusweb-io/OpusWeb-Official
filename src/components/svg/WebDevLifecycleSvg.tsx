@@ -73,7 +73,7 @@ export default function WebDevLifecycleSvg(props: JSX.IntrinsicAttributes & Reac
         </defs>
 
         <g className="lifecycle-stage-webdev" transform="translate(250, 250)">
-             <rect x="0" y="0" width="100" height="100" rx="15" ry="15" fill="url(#grad2WebDev)" opacity="0.8"/>
+             <circle cx="50" cy="50" r="50" fill="url(#grad2WebDev)" opacity="0.8"/>
              <text x="50" y="35" className="webdev-svg-text-center">WEB</text>
              <text x="50" y="65" className="webdev-svg-text-center">DEV</text>
         </g>
