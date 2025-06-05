@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins, PT_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import ScrollProgressBar from '@/components/ui/ScrollProgressBar';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
         {/* Favicon links can be added here if needed */}
       </head>
       <body className="font-body antialiased">
+        <ScrollProgressBar />
         {children}
         <Toaster />
       </body>
