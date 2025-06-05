@@ -38,7 +38,7 @@ export default function WebDevLifecycleSvg(props: JSX.IntrinsicAttributes & Reac
             font-family: 'Inter', sans-serif;
             font-size: 18px;
             font-weight: 600;
-            fill: #374151;
+            fill: hsl(var(--foreground)); /* Use theme color */
             text-anchor: middle;
             dominant-baseline: central;
             pointer-events: none;
@@ -69,7 +69,7 @@ export default function WebDevLifecycleSvg(props: JSX.IntrinsicAttributes & Reac
             <linearGradient id="grad4WebDev" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style={{stopColor:"#fbbf24",stopOpacity:1}} /> <stop offset="100%" style={{stopColor:"#f59e0b",stopOpacity:1}} /> </linearGradient>
             <linearGradient id="grad5WebDev" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style={{stopColor:"#f87171",stopOpacity:1}} /> <stop offset="100%" style={{stopColor:"#ef4444",stopOpacity:1}} /> </linearGradient>
             <linearGradient id="grad6WebDev" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style={{stopColor:"#fcd34d",stopOpacity:1}} /> <stop offset="100%" style={{stopColor:"#fbbf24",stopOpacity:1}} /> </linearGradient>
-            <circle id="dashed-circleWebDev" cx="300" cy="300" r="220" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" fill="none"/>
+            <circle id="dashed-circleWebDev" cx="300" cy="300" r="220" stroke="hsl(var(--border))" strokeWidth="2" strokeDasharray="8 8" fill="none"/>
         </defs>
 
         <g className="lifecycle-stage-webdev" transform="translate(250, 250)">
@@ -87,7 +87,7 @@ export default function WebDevLifecycleSvg(props: JSX.IntrinsicAttributes & Reac
         </g>
 
         <g className="lifecycle-stage-webdev" transform="translate(430, 150)">
-            <rect x="5" y="5" width="90" height="90" rx="15" ry="15" className="icon-color-2-webdev" />
+            <circle cx="50" cy="50" r="45" className="icon-color-2-webdev" />
             <rect x="20" y="20" width="60" height="40" rx="5" ry="5" fill="white" opacity="0.8"/>
             <rect x="20" y="70" width="30" height="10" rx="2" ry="2" fill="white" opacity="0.8"/>
             <rect x="55" y="70" width="25" height="10" rx="2" ry="2" fill="white" opacity="0.8"/>
@@ -101,26 +101,26 @@ export default function WebDevLifecycleSvg(props: JSX.IntrinsicAttributes & Reac
         </g>
 
         <g className="lifecycle-stage-webdev" transform="translate(250, 450)">
-            <rect x="5" y="5" width="90" height="90" rx="15" ry="15" className="icon-color-4-webdev" />
-            <circle cx="40" cy="40" r="25" stroke="white" strokeWidth="8" fill="none" />
-            <line x1="55" y1="55" x2="85" y2="85" stroke="white" strokeWidth="8" strokeLinecap="round" />
+            <circle cx="50" cy="50" r="45" className="icon-color-4-webdev" />
+            <circle cx="45" cy="45" r="22" stroke="white" strokeWidth="7" fill="none" />
+            <line x1="60" y1="60" x2="80" y2="80" stroke="white" strokeWidth="7" strokeLinecap="round" />
             <text x="50" y="120" className="webdev-svg-text">Testing</text>
         </g>
 
         <g className="lifecycle-stage-webdev" transform="translate(70, 350)">
             <circle cx="50" cy="50" r="45" className="icon-color-5-webdev" />
             <path d="M40 20 L60 20 L60 40 L70 50 L50 80 L30 50 L40 40 Z" fill="white" />
-            <rect x="42" y="70" width="16" height="15" rx="2" ry="2" fill="white" />
-            <path d="M35 55 L35 70 L30 70 L30 60 Z M65 55 L65 70 L70 70 L70 60 Z" fill="white" />
+            <rect x="42" y="70" width="16" height="15" rx="2" ry="2" fill="white" /> {/* Rocket exhaust */}
+            <path d="M35 55 L35 70 L30 70 L30 60 Z M65 55 L65 70 L70 70 L70 60 Z" fill="white" /> {/* Fins */}
             <text x="50" y="120" className="webdev-svg-text">Deploy</text>
         </g>
 
         <g className="lifecycle-stage-webdev" transform="translate(70, 150)">
-            <rect x="5" y="5" width="90" height="90" rx="15" ry="15" className="icon-color-6-webdev" />
-            <path d="M50 5 L70 15 L50 35 L30 15 Z" fill="white" />
-            <path d="M85 30 L75 50 L95 50 L85 70 Z" fill="white" />
-            <path d="M50 95 L30 85 L50 65 L70 85 Z" fill="white" />
-            <path d="M15 70 L25 50 L5 50 L15 30 Z" fill="white" />
+            <circle cx="50" cy="50" r="45" className="icon-color-6-webdev" />
+            <path d="M50 12 L70 22 L50 42 L30 22 Z" fill="white" /> {/* Top tooth slightly adjusted for circle */}
+            <path d="M88 50 L78 70 L58 50 L78 30 Z" fill="white" /> {/* Right tooth slightly adjusted */}
+            <path d="M50 88 L30 78 L50 58 L70 78 Z" fill="white" /> {/* Bottom tooth slightly adjusted */}
+            <path d="M12 50 L22 30 L42 50 L22 70 Z" fill="white" /> {/* Left tooth slightly adjusted */}
             <circle cx="50" cy="50" r="20" fill="white" />
             <text x="50" y="120" className="webdev-svg-text">Maintain</text>
         </g>
