@@ -121,24 +121,24 @@
 }
 
 @layer utilities {
-  .animate-diagonal-reveal {
-    animation: diagonal-section-entry 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  .animate-slide-from-bottom-reveal {
+    animation: slide-from-bottom-entry 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   }
 
-  @keyframes diagonal-section-entry {
+  @keyframes slide-from-bottom-entry {
     from {
       opacity: 0;
-      transform: translateX(25%) skewX(-7deg); /* Start off-screen to the right and slightly skewed */
+      transform: translateY(50px); /* Start off-screen below */
     }
     to {
       opacity: 1;
-      transform: translateX(0) skewX(0deg); /* End in place, unskewed */
+      transform: translateY(0); /* End in place */
     }
   }
 
   /* Reduced motion fallback: simple fade-in */
   @media (prefers-reduced-motion: reduce) {
-    .animate-diagonal-reveal {
+    .animate-slide-from-bottom-reveal {
       animation: page-fade-in 0.5s ease-out forwards;
     }
     @keyframes page-fade-in { /* Re-using a simple fade-in for reduced motion */

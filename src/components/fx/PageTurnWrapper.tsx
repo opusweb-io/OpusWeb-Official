@@ -45,7 +45,7 @@ export default function PageTurnWrapper({ children }: PageTurnWrapperProps) {
       ref={sectionRef}
       className={cn(
         'opacity-0', // Start fully transparent
-        isVisible && 'animate-diagonal-reveal' // Apply animation when visible
+        isVisible && 'animate-slide-from-bottom-reveal' // Apply animation when visible
       )}
     >
       {children}
