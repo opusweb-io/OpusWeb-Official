@@ -1,13 +1,14 @@
-import WebDevLifecycleSvg from '@/components/svg/WebDevLifecycleSvg';
+import InteractiveLifecycle from '@/components/sections/InteractiveLifecycle';
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="md:w-1/2">
-            <div className="relative aspect-square w-full max-w-lg mx-auto md:max-w-none bg-card rounded-2xl overflow-hidden shadow-2xl p-2">
-              <WebDevLifecycleSvg className="w-full h-full" />
+          <div className="md:w-1/2 flex justify-center items-center">
+            {/* Container for the 600x600px interactive element */}
+            <div className="w-[600px] h-[600px] overflow-hidden flex justify-center items-center">
+              <InteractiveLifecycle />
             </div>
           </div>
           <div className="md:w-1/2">
