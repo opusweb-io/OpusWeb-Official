@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import WebDevLifecycleSvg from '@/components/svg/WebDevLifecycleSvg';
 
 export default function AboutSection() {
   return (
@@ -6,15 +6,8 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
-            <div className="relative aspect-square w-full max-w-md mx-auto md:max-w-none rounded-lg overflow-hidden shadow-2xl">
-              <Image
-                src="https://placehold.co/600x600.png"
-                alt="OpusWeb Team"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                data-ai-hint="team collaboration"
-              />
+            <div className="relative aspect-square w-full max-w-lg mx-auto md:max-w-none bg-card rounded-2xl overflow-hidden shadow-2xl p-2">
+              <WebDevLifecycleSvg className="w-full h-full" />
             </div>
           </div>
           <div className="md:w-1/2">
