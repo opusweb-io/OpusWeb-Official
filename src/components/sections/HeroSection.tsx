@@ -1,22 +1,25 @@
-
 'use client';
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import HeroBackground from '@/components/svg/HeroBackground';
+import DynamicSprinkleBackground from '@/components/svg/DynamicSprinkleBackground';
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center text-foreground overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/50 to-background/90"></div>
+      {/* Base gradient layer, behind sprinkles */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/50 to-background/90 z-0"></div>
+      
+      {/* Dynamic sprinkle background layer */}
       <div 
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-70 z-[1]" // Ensure sprinkles are above gradient, below text
       >
-        <HeroBackground className="w-full h-full object-cover"/>
+        <DynamicSprinkleBackground className="w-full h-full" />
       </div>
       
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      {/* Content layer, on top of everything */}
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-[2]">
         <div className="max-w-3xl mx-auto text-center py-24 md:py-32">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-headline text-primary">
             Crafting Digital Masterpieces
