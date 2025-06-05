@@ -105,7 +105,6 @@ export default function PageLoader() {
         </g>
         <text x="50" y="105" className="text-opusweb-loader">OpusWeb</text>
       </svg>
-       <p className="mt-4 text-sm text-muted-foreground">Loading digital masterpieces...</p>
     </div>
   );
 }
