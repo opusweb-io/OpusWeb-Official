@@ -8,7 +8,7 @@ export default function AboutSection() {
           <div className="md:w-1/2">
             <div className="relative aspect-square w-full max-w-md mx-auto md:max-w-none rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="https://placehold.co/600x600/4F46E5/FFFFFF.png"
+                src="https://placehold.co/600x600.png"
                 alt="OpusWeb Team"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

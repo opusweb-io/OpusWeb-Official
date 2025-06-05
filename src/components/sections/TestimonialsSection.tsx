@@ -5,19 +5,22 @@ const testimonials = [
     quote: "OpusWeb delivered a website that exceeded our expectations. Their attention to detail and commitment to quality is unmatched.",
     name: "Jane Smith",
     company: "Tech Innovations Inc.",
-    avatarUrl: "https://placehold.co/100x100/E0E7FF/4F46E5.png?text=JS",
+    avatarUrl: "https://placehold.co/100x100.png",
+    avatarHint: "person portrait",
   },
   {
     quote: "Working with OpusWeb was a game-changer for our business. They understood our vision and executed it perfectly.",
     name: "John Doe",
     company: "Global Solutions Ltd.",
-    avatarUrl: "https://placehold.co/100x100/E0E7FF/4F46E5.png?text=JD",
+    avatarUrl: "https://placehold.co/100x100.png",
+    avatarHint: "person portrait",
   },
   {
     quote: "The team at OpusWeb is professional, responsive, and incredibly talented. I would recommend them to anyone looking for top-notch web development.",
     name: "Sarah Johnson",
     company: "Creative Minds Agency",
-    avatarUrl: "https://placehold.co/100x100/E0E7FF/4F46E5.png?text=SJ",
+    avatarUrl: "https://placehold.co/100x100.png",
+    avatarHint: "person portrait",
   },
 ];
 
@@ -41,6 +44,7 @@ export default function TestimonialsSection() {
               name={testimonial.name}
               company={testimonial.company}
               avatarUrl={testimonial.avatarUrl}
+              avatarHint={testimonial.avatarHint}
             />
           ))}
         </div>

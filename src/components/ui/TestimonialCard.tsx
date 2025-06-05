@@ -7,9 +7,10 @@ interface TestimonialCardProps {
   name: string;
   company: string;
   avatarUrl?: string;
+  avatarHint?: string;
 }
 
-export default function TestimonialCard({ quote, name, company, avatarUrl }: TestimonialCardProps) {
+export default function TestimonialCard({ quote, name, company, avatarUrl, avatarHint }: TestimonialCardProps) {
   const initials = name.split(' ').map(n => n[0]).join('').toUpperCase();
   return (
     <Card className="bg-card p-6 shadow-lg h-full flex flex-col">
@@ -19,7 +20,7 @@ export default function TestimonialCard({ quote, name, company, avatarUrl }: Tes
       </CardContent>
       <CardFooter className="flex items-center gap-4">
         <Avatar>
-          {avatarUrl ? <AvatarImage src={avatarUrl} alt={name} /> : null}
+          {avatarUrl ? <AvatarImage src={avatarUrl} alt={name} data-ai-hint={avatarHint} /> : null}
           <AvatarFallback className="bg-primary text-primary-foreground">{initials}</AvatarFallback>
         </Avatar>
         <div>

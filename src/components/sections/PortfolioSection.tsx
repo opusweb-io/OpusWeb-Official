@@ -6,29 +6,29 @@ const projects = [
   {
     title: "E-Commerce Platform",
     description: "A full-featured online store with payment integration and inventory management.",
-    imageUrl: "https://placehold.co/600x400/4F46E5/FFFFFF.png",
-    imageHint: "ecommerce website",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "ecommerce site",
     link: "#", // Replace with actual project link or case study page
   },
   {
     title: "Travel Blog",
     description: "A responsive blog for travel enthusiasts with stunning photography.",
-    imageUrl: "https://placehold.co/600x400/8B5CF6/FFFFFF.png",
+    imageUrl: "https://placehold.co/600x400.png",
     imageHint: "travel blog",
     link: "#",
   },
   {
     title: "Fitness App",
     description: "A mobile application for tracking workouts and nutrition.",
-    imageUrl: "https://placehold.co/600x400/EC4899/FFFFFF.png",
+    imageUrl: "https://placehold.co/600x400.png",
     imageHint: "fitness app",
     link: "#",
   },
   {
     title: "Corporate Website",
     description: "A professional website for a financial consulting firm.",
-    imageUrl: "https://placehold.co/600x400/38BDF8/FFFFFF.png",
-    imageHint: "corporate website",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "corporate site",
     link: "#",
   },
 ];
