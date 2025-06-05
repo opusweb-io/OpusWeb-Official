@@ -1,9 +1,15 @@
+
 import InteractiveLifecycle from '@/components/sections/InteractiveLifecycle';
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">
+            Our Process
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2 flex justify-center items-center">
             {/* Container for the 600x600px interactive element */}
@@ -12,9 +18,6 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 font-headline">
-              Our Process
-            </h2>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
                 At OpusWeb, we're passionate about transforming your vision into exceptional digital realities. We believe that a transparent and collaborative process is key to crafting web solutions that not only meet but exceed expectations.
