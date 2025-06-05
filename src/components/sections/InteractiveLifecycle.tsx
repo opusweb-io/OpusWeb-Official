@@ -1,3 +1,4 @@
+
 'use client';
 
 import type { SVGProps } from 'react';
@@ -253,11 +254,6 @@ export default function InteractiveLifecycle() {
         .icon-svg.launch-icon rect {
            /* If some parts need fill, they can be targeted specifically or adjust SVG */
         }
-        /* If the original SVGs used fill for some parts and stroke for others,
-           this might need more granular control or adjustments to the SVGs themselves.
-           The current general rule is stroke: white, fill: none.
-        */
-
 
       `}</style>
       <div className="interactive-lifecycle-wrapper">
@@ -270,16 +266,17 @@ export default function InteractiveLifecycle() {
         </div>
 
         <svg className="connectors" viewBox="0 0 600 600">
-          <path d="M120 120 Q 300 50 480 120" /> 
-          <path d="M480 120 Q 550 300 480 480" />
-          <path d="M480 480 Q 300 550 120 480" />
-          <path d="M120 480 Q 50 300 120 120" />
+          {/* Outer ring connecting stages */}
+          <path d="M130 125 Q 300 50 470 125" /> {/* Approx Discovery center to Design center */}
+          <path d="M470 125 Q 550 300 470 475" /> {/* Approx Design center to Development center */}
+          <path d="M470 475 Q 300 550 130 475" /> {/* Approx Development center to Testing center */}
+          <path d="M130 475 Q 50 300 130 125" /> {/* Approx Testing center to Discovery center */}
           
-          {/* Connect to center (Launch) - example paths, adjust as needed */}
-          <path d="M120 120 Q 210 210 280 280" /> {/* Discovery to Launch */}
-          <path d="M480 120 Q 390 210 320 280" /> {/* Design to Launch */}
-          <path d="M480 480 Q 390 390 320 320" /> {/* Development to Launch */}
-          <path d="M120 480 Q 210 390 280 320" /> {/* Testing to Launch */}
+          {/* Connect outer stages to the central Launch stage (center at 300,300) */}
+          <path d="M130 125 Q 215 212.5 300 300" /> {/* Discovery to Launch center */}
+          <path d="M470 125 Q 385 212.5 300 300" /> {/* Design to Launch center */}
+          <path d="M470 475 Q 385 387.5 300 300" /> {/* Development to Launch center */}
+          <path d="M130 475 Q 215 387.5 300 300" /> {/* Testing to Launch center */}
         </svg>
 
         <div className="stage-card discovery">
@@ -325,3 +322,4 @@ export default function InteractiveLifecycle() {
     </>
   );
 }
+
