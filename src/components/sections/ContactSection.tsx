@@ -16,8 +16,8 @@ const contactDetails = [
   },
   {
     icon: MapPin,
-    title: "Office",
-    value: "Kolhapur, Maharashtra, India.",
+    title: "Location",
+    value: "India.",
   },
 ];
 

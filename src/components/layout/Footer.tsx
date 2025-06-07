@@ -67,7 +67,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 font-headline">Contact</h4>
             <address className="not-italic text-primary-foreground/80 space-y-1 text-sm">
-              <p>Kolhapur, Maharashtra, India.</p>
+              <p>India.</p>
               <p className="mt-2">
                 <a href="mailto:opusweb@tuta.io" className="hover:text-primary-foreground transition-colors">
                   opusweb@tuta.io
