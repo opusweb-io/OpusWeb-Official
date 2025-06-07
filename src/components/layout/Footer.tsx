@@ -1,13 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, Code2 } from 'lucide-react';
-import SocialIconLink from '@/components/ui/SocialIconLink';
-
-const socialLinks = [
-  { href: "https://facebook.com", icon: Facebook, label: "Facebook" },
-  { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-];
+import { Code2 } from 'lucide-react';
 
 const quickLinks = [
   { href: "#services", label: "Services" },
@@ -33,11 +25,7 @@ export default function Footer() {
             <p className="text-primary-foreground/80 mb-4 text-sm">
               Crafting digital masterpieces for your business.
             </p>
-            <div className="flex space-x-2">
-              {socialLinks.map((social) => (
-                <SocialIconLink key={social.href} href={social.href} icon={social.icon} label={social.label} />
-              ))}
-            </div>
+            {/* Social links removed */}
           </div>
 
           <div>
