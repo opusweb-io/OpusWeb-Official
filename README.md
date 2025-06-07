@@ -3,23 +3,23 @@
 
 ## Overview
 
-OpusWeb is a sleek, modern single-page application designed to showcase cutting-edge web development capabilities. It features a futuristic design aesthetic, engaging animations, and AI-powered contact form prioritization. Built with Next.js, React, ShadCN UI, Tailwind CSS, and Genkit, it demonstrates best practices in front-end development and Generative AI integration.
+OpusWeb is a sleek, modern single-page application designed to showcase cutting-edge web development capabilities. It offers a **highly dynamic and animated user experience**, featuring a futuristic design aesthetic, **engaging interactive elements**, and AI-powered contact form prioritization. Built with Next.js, React, ShadCN UI, Tailwind CSS, and Genkit, it demonstrates best practices in front-end development and Generative AI integration.
 
 ## Key Features
 
-*   **Futuristic UI/UX:** A visually striking theme with a dark base, vibrant accents (electric blues and cyans), and smooth animations.
-*   **Responsive Design:** Fully responsive layout for a seamless experience across all devices.
+*   **Futuristic UI/UX:** A visually striking theme with a dark base, vibrant accents (electric blues and cyans), and **fluid, smooth animations throughout the interface** that enhance user interaction.
+*   **Responsive Design:** Fully responsive layout for a seamless and **visually consistent animated experience** across all devices.
 *   **Interactive Elements:**
-    *   Dynamic sprinkle background on the hero section.
-    *   Interactive "Our Process" lifecycle diagram in the About section.
-    *   Page-reveal animations on scroll using a `PageTurnWrapper`.
+    *   A **captivating, dynamic sprinkle animation** that brings the hero section to life with subtle, futuristic particle effects.
+    *   An **interactive "Our Process" lifecycle diagram** in the About section, featuring animated transitions and hover effects that guide the user through each stage.
+    *   **Smooth, page-reveal animations** as users scroll, enhancing content discovery through the `PageTurnWrapper` component.
 *   **AI-Powered Contact Form:**
     *   Integrates Google's Gemini model via Genkit to analyze and prioritize incoming contact inquiries by urgency (High, Medium, Low).
     *   Email notifications for form submissions sent via Nodemailer using Gmail SMTP.
 *   **User Engagement & Polish:**
-    *   Custom SVG page loader animation.
-    *   Scroll progress bar indicating reading position.
-    *   "Discovery Badge Unlocked!" toast notification upon scrolling towards the end of the page.
+    *   A **custom SVG page loader animation** providing an elegant initial loading experience.
+    *   Scroll progress bar indicating reading position with smooth updates.
+    *   "Discovery Badge Unlocked!" toast notification upon scrolling towards the end of the page, adding a touch of gamification.
 *   **Modern Tech Stack:** Built with Next.js App Router, React Server Components, ShadCN UI components, and Tailwind CSS for styling.
 
 ## Tech Stack
@@ -31,7 +31,7 @@ OpusWeb is a sleek, modern single-page application designed to showcase cutting-
 *   **AI Integration:** Genkit (with Google Gemini via `@genkit-ai/googleai`)
 *   **Email:** Nodemailer (configured for Gmail SMTP)
 *   **Form Handling:** React Hook Form with Zod for validation
-*   **Animations:** CSS Keyframes, Tailwind CSS utilities
+*   **Animations:** CSS Keyframes, Tailwind CSS utilities, Intersection Observer API for scroll-triggered effects.
 
 ## Getting Started
 
