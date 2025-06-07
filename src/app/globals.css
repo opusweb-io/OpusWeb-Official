@@ -5,94 +5,94 @@
 
 @layer base {
   :root {
-    --background: 45 100% 98%; /* Very Light Warm Yellowish White */
-    --foreground: 210 20% 30%; /* Soft Dark Blue-Gray */
+    --background: 210 17% 98%; /* Light Gray (#F9FAFB) */
+    --foreground: 210 40% 25%; /* Dark Blue-Gray for strong contrast */
 
-    --card: 45 100% 95%; /* Light Cream */
-    --card-foreground: 210 20% 30%;
+    --card: 0 0% 100%; /* White for clean cards */
+    --card-foreground: 210 40% 25%;
 
-    --popover: 45 100% 94%; /* Slightly Darker Cream for Popover */
-    --popover-foreground: 210 20% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 25%;
 
-    --primary: 195 85% 50%; /* Bright Cheerful Sky Blue */
+    --primary: 243 75% 58%; /* Indigo (#4F46E5) */
     --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 195 60% 90%; /* Lighter, Softer Sky Blue */
-    --secondary-foreground: 195 85% 30%; /* Darker Blue for text on light secondary */
+    --secondary: 243 75% 92%; /* Lighter Indigo */
+    --secondary-foreground: 243 75% 30%; /* Darker Indigo for text on light secondary */
 
-    --muted: 45 50% 90%; /* Very Light Desaturated Warm Yellow/Gray */
-    --muted-foreground: 210 20% 50%; /* Medium Soft Blue-Gray */
+    --muted: 210 20% 92%; /* Slightly darker light gray */
+    --muted-foreground: 210 20% 55%; /* Medium gray */
 
-    --accent: 40 100% 60%; /* Vibrant Sunny Orange-Yellow */
-    --accent-foreground: 25 60% 25%; /* Dark Brown/Orange for text on accent */
+    --accent: 203 93% 60%; /* Teal (#38BDF8) */
+    --accent-foreground: 203 90% 20%; /* Dark Teal for text on accent */
 
     --destructive: 0 80% 60%; /* Clear Red */
     --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 45 30% 85%; /* Soft Warm Border */
-    --input: 45 50% 92%; /* Light Warm Input Background */
-    --ring: 195 85% 55%; /* Brighter Sky Blue for focus rings */
+    --border: 210 15% 88%; /* Subtle gray border */
+    --input: 210 15% 94%; /* Slightly off-white input bg */
+    --ring: 243 75% 65%; /* Slightly lighter Indigo for focus rings */
 
     --radius: 0.5rem;
 
-    --chart-1: hsl(var(--primary)); 
-    --chart-2: hsl(var(--accent)); 
-    --chart-3: 195 70% 65%; /* Lighter Primary */
-    --chart-4: 40 80% 70%; /* Lighter Accent */
-    --chart-5: 210 20% 60%; /* Muted Blue-Gray for charts */
+    --chart-1: hsl(var(--primary));
+    --chart-2: hsl(var(--accent));
+    --chart-3: 243 75% 70%; /* Lighter Primary */
+    --chart-4: 203 93% 70%; /* Lighter Accent */
+    --chart-5: 210 30% 60%; /* Muted Blue-Gray for charts */
 
-    --sidebar-background: 45 100% 96%; /* Slightly Creamier for Sidebar */
-    --sidebar-foreground: 210 20% 35%;
+    --sidebar-background: 210 17% 96%; /* Slightly darker light gray for Sidebar */
+    --sidebar-foreground: 210 40% 30%;
     --sidebar-primary: hsl(var(--primary));
     --sidebar-primary-foreground: hsl(var(--primary-foreground));
     --sidebar-accent: hsl(var(--accent));
     --sidebar-accent-foreground: hsl(var(--accent-foreground));
-    --sidebar-border: 45 30% 80%;
+    --sidebar-border: 210 15% 85%;
     --sidebar-ring: hsl(var(--ring));
   }
 
   .dark {
-    --background: 220 40% 10%; /* Deep Rich Dark Blue */
-    --foreground: 40 100% 90%; /* Warm Light Cream/Yellow */
+    --background: 220 20% 7%; /* Very Dark Desaturated Blue */
+    --foreground: 210 30% 90%; /* Light Gray/Off-white */
 
-    --card: 220 40% 13%; 
-    --card-foreground: 40 100% 90%;
+    --card: 220 20% 11%;  /* Slightly lighter dark blue for cards */
+    --card-foreground: 210 30% 90%;
 
-    --popover: 220 40% 12%; 
-    --popover-foreground: 40 100% 90%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 30% 90%;
 
-    --primary: 195 90% 60%; /* Vibrant Sky Blue (Brighter for Dark Mode) */
-    --primary-foreground: 210 50% 15%; /* Very Dark Blue for text on primary */
+    --primary: 243 80% 68%; /* Brighter Indigo for dark mode */
+    --primary-foreground: 243 80% 15%; /* Very Dark Indigo for text on primary */
 
-    --secondary: 220 30% 25%; 
-    --secondary-foreground: 40 80% 85%; 
+    --secondary: 243 50% 25%; /* Darker, muted Indigo */
+    --secondary-foreground: 243 80% 85%; /* Lighter Indigo for text on dark secondary */
 
-    --muted: 220 20% 30%; 
-    --muted-foreground: 40 60% 70%; 
+    --muted: 220 15% 25%; /* Dark Gray */
+    --muted-foreground: 210 20% 65%; /* Medium-Light Gray */
 
-    --accent: 40 100% 65%; /* Bright Cheerful Orange-Yellow (Brighter for Dark Mode) */
-    --accent-foreground: 25 60% 15%; /* Very Dark Brown/Orange for text on accent */
+    --accent: 203 95% 65%; /* Brighter Teal for dark mode */
+    --accent-foreground: 203 90% 10%; /* Very Dark Teal for text on accent */
 
-    --destructive: 0 85% 65%; 
+    --destructive: 0 70% 55%; /* Softer Red for dark mode */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 20%; 
-    --input: 220 30% 18%; 
-    --ring: 195 90% 65%; 
+    --border: 220 15% 20%; /* Dark Gray border */
+    --input: 220 15% 15%; /* Very Dark input background */
+    --ring: 243 80% 70%; /* Bright Indigo for focus rings */
     
     --chart-1: hsl(var(--primary));
     --chart-2: hsl(var(--accent));
-    --chart-3: 195 75% 70%; /* Lighter Primary for Dark */
-    --chart-4: 40 85% 75%; /* Lighter Accent for Dark */
+    --chart-3: 243 80% 75%; /* Lighter Primary for Dark */
+    --chart-4: 203 95% 75%; /* Lighter Accent for Dark */
     --chart-5: 220 20% 50%; /* Muted Dark Blue/Gray for charts */
 
-    --sidebar-background: 220 40% 8%; /* Even Darker Blue for Sidebar */
-    --sidebar-foreground: 40 90% 80%;
+    --sidebar-background: 220 20% 9%; /* Darker Blue for Sidebar */
+    --sidebar-foreground: 210 30% 85%;
     --sidebar-primary: hsl(var(--primary));
     --sidebar-primary-foreground: hsl(var(--primary-foreground));
     --sidebar-accent: hsl(var(--accent));
     --sidebar-accent-foreground: hsl(var(--accent-foreground));
-    --sidebar-border: 220 30% 15%;
+    --sidebar-border: 220 15% 18%;
     --sidebar-ring: hsl(var(--ring));
   }
 }
