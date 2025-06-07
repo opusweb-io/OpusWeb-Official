@@ -33,4 +33,3 @@ At OpusWeb, we believe in a transparent and collaborative approach to bring your
 
 ---
 
-*For detailed setup instructions, tech stack, and other project specifics, please refer to the project's `package.json` and internal documentation within the `src` directory.*
